@@ -7,11 +7,12 @@ var BasicCard = require("./BasicCard");
 function ClozeCard(text, cloze){
 	this.text = text;//full text
 	this.cloze = cloze;//instance of text in this.text
+	this.partial();
 	}
 	ClozeCard.prototype.partial = function(){
 		this.partial = (this.text).replace(this.cloze,"______")
-//* The constructor should accept two arguments: `text` and `cloze`.
-//The constructor will have 3 properties
+}//replaces cloze value with partial;
+	//ClozeCard.prototoype.
 //`cloze` property that contains _only_ the cloze-deleted portion of the text.
 
 //`partial` property that contains _only_ the partial text.
